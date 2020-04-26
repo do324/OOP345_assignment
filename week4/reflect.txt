@@ -1,0 +1,35 @@
+*The reason for template specializing is  to specialize only some arguments of a class template, as opposed to explicit specialization, where all the template arguments are provided. this template spcializing enable to return as a result type.
+ex)
+template<>
+	std::string SummableLVPair<std::string, std::string>::sum(const std::string& label, const std::string& v) const {
+		std::string result = v + " " + LVPair<std::string, std::string>::getValue();
+		return result;
+	}
+
+V sum(const L& label, const V& sum) const {
+			V result = LVPair<L, V>::getValue() + sum;
+			return result;
+		}
+
+
+*The reason for specializing the initial value for a summation is a class template that includes a class variable requires a complementary template declaration that defines and initializes the class variable.
+ex)
+template<typename L, typename V>
+size_t SummableLVPair<L, V>::fieldwidth = 0u;
+
+template<>
+int SummableLVPair<std::string, int>::init = 0;
+
+template<>
+std::string SummableLVPair<std::string, std::string>::init = ""; 
+
+*The reason for defining the class variable outside the class definition is one definition rule. Within a program, each static object must be defined once, and only once.  
+ex)
+class SummableLVPair : public LVPair<L, V> {
+		static V init;		///holds the initial value for starting a summation
+		static size_t fieldwidth;	///holds the minimum field width
+}
+ 
+I learned this week about class template. how to make clss templaates, function templates and template body. also what is a specialization and why is it needed.  also how to declare static data member in class template
+
+

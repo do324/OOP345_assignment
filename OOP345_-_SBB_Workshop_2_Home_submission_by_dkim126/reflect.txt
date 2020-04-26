@@ -1,0 +1,25 @@
+I learned that copy operations can be used when make a copy of a object to another object. 
+otherwise, move operations can be used move the resource's ownershop from a object dynamic allocation of addresses to objects instead of objects themselves to anoher object.
+copy can not copy in same memory. but, move can be copy in same memory.
+also, move constructor and assingment is more faster than copy constructor and assingment.
+copy operation is useful when back up is needed. but move opereation dosent need a back up for duplication.
+in text.cpp, *this = std::move(src); is move constructor/ this is just moved the string not copy and save string. 
+I also learned the way that how std::strings worked with the heap and stack memory. it is useful.
+I also learned how to dynamically allocated array to store address to object than just object.
+the way that array is declared is pointer. size of array is declared at copile time.
+
+
+  
+##quiz1
+1. 
+2.
+4.wild pointer refers to a pointer that has not been initialized to any address.
+5.
+6.
+l-value : 900
+r-value : 30
+r-value : 930
+l-value : 55
+r-value : 900
+
+

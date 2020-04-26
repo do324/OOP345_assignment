@@ -1,0 +1,75 @@
+•	
+•	The difference between the implementations of move and copy functions in a composition and an aggregation.
+
+1.The difference between the implementations of a composition and an aggregation.
+In both aggregation and composition object of one class can "owns" object of another class.
+but In Composition, the object of class that is owned by the object of it's owning class cannot live on it's own.
+However, It will always live as a part of it's owning object where as in Aggregation the dependent object is standalone and can exist even if the object of owning class is dead.
+
+
+///aggregation
+class Notifications
+	{
+		const Message** Pointer_ArrayOfAddress;	
+		int Max_NumOfAddress;
+		int NumOfAddressStored;
+	public:
+		Notifications();
+		Notifications(const Notifications&);
+		Notifications& operator=(const Notifications&);
+		Notifications(Notifications&&);
+		Notifications& operator=(Notifications&&);
+		~Notifications();
+
+		Notifications(int);
+		Notifications& operator+=(const Message& msg);
+		Notifications& operator-=(const Message& msg);
+		void display(std::ostream& os) const;
+		size_t size() const;
+	};
+
+	
+	
+////composition 
+	class MessagePack
+	{
+		Message* messages;
+		int NumOfElements;
+	public:
+		MessagePack();
+		MessagePack(Message**, int);
+		MessagePack(const MessagePack&);
+		MessagePack& operator=(const MessagePack&);
+		MessagePack(MessagePack&&);
+		MessagePack& operator=(MessagePack&&);
+		~MessagePack();
+		void display(std::ostream& os) const;
+		size_t size() const;
+	};
+	
+	this two classes can own another object of class.
+	However, child class of notification can live without Notifications
+	But, child class of Messagepack can not live without MessagePack
+	
+	
+	2.The difference between the implementations of move and copy functions in a composition and an aggregation.
+	
+	in aggregator(Notifications), copy assignment operator for this class dynamically allocate memory for an array of pointers to Message objects, not an array of Message objects.
+	ex)const Message** Pointer_ArrayOfAddress;	
+	but in compositon(MessagePack), copy assignment operator for this class dynamically allocate memory for array of Message objects.
+	ex)Message* messages;
+	
+	
+	I can learn about the relationships of classes like  aggregation and composition
+	from this workshop.
+	
+	//////quiz2
+	1.c
+	2.a
+	3.d
+	4.a
+	5.c
+	6.b
+	7.a
+	8.d
+	9.c

@@ -1,0 +1,11 @@
+
+I learned that Internal linkage refers to everything only in scope of a translation unit. 
+Also, External linkage refers to things that exist beyond a particular translation unit. 
+In string.cpp, External linkage is used to use likage beyond particular translation unit.
+And I learned how to give Command line arguments. 
+To pass command line arguments, we have to define main() with two arguments
+first argument is the number of command line arguments and 
+second is list of command-line arguments.
+and i learned again about namespace, class and object.
+process()function can creates stirng. and in w1.cpp it is called.  
+

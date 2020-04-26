@@ -1,0 +1,8 @@
+﻿  AssemblyLine.cpp
+  project.cpp
+  Utilities.cpp
+  코드를 생성하고 있습니다...
+AssemblyLine.obj : error LNK2019: "public: __thiscall sict::ItemSet::ItemSet(class sict::ItemSet &&)" (??0ItemSet@sict@@QAE@$$QAV01@@Z) 외부 기호(참조 위치: "public: static void __cdecl std::_Default_allocator_traits<class std::allocator<class sict::ItemSet> >::construct<class sict::ItemSet,class sict::ItemSet>(class std::allocator<class sict::ItemSet> &,class sict::ItemSet * const,class sict::ItemSet &&)" (??$construct@VItemSet@sict@@V12@@?$_Default_allocator_traits@V?$allocator@VItemSet@sict@@@std@@@std@@SAXAAV?$allocator@VItemSet@sict@@@1@QAVItemSet@sict@@$$QAV34@@Z) 함수)에서 확인하지 못했습니다.
+ItemSet.obj : error LNK2019: "public: __thiscall sict::Utilities::~Utilities(void)" (??1Utilities@sict@@QAE@XZ) 외부 기호(참조 위치: __unwindfunclet$??0ItemSet@sict@@QAE@AAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z$0 함수)에서 확인하지 못했습니다.
+ItemSet.obj : error LNK2001: "private: static int sict::ItemSet::myFieldWidth" (?myFieldWidth@ItemSet@sict@@0HA) 외부 기호를 확인할 수 없습니다.
+C:\Users\김도연\source\repos\Project27\Debug\Project27.exe : fatal error LNK1120: 3개의 확인할 수 없는 외부 참조입니다.

@@ -1,0 +1,7 @@
+﻿  w7.cpp
+c:\users\김도연\source\repos\project30\project30\datatable.h(72): warning C4244: '인수': 'double'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  c:\users\김도연\source\repos\project30\project30\datatable.h(45): note: 클래스 템플릿 멤버 함수 'sict::DataTable<float>::DataTable(std::ifstream &)'을(를) 컴파일하고 있습니다.
+  c:\users\김도연\source\repos\project30\project30\w7.cpp(32): note: 컴파일 중인 함수 템플릿 인스턴스화 'sict::DataTable<float>::DataTable(std::ifstream &)'에 대한 참조를 확인하십시오.
+  c:\users\김도연\source\repos\project30\project30\w7.cpp(32): note: 컴파일 중인 클래스 템플릿 인스턴스화 'sict::DataTable<float>'에 대한 참조를 확인하세요.
+c:\users\김도연\source\repos\project30\project30\datatable.h(73): warning C4244: '인수': 'double'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Project30.vcxproj -> C:\Users\김도연\source\repos\Project30\Debug\Project30.exe
